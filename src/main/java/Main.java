@@ -1,10 +1,11 @@
-import static spark.Spark.*;
+import static spark.Spark.get;
+import static spark.SparkBase.port;
 
 public class Main {
 
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
-        get("/hello", (req, res) -> "Hello Heroku World");
+		get("/hello", (req, res) -> "Test Changes");
     }
 
     static int getHerokuAssignedPort() {
